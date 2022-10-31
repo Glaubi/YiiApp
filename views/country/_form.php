@@ -19,11 +19,6 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'code'); ?>
@@ -43,11 +38,6 @@
 		<?php echo $form->error($model,'population'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'timer'); ?>
-		<?php echo $form->textField($model,'timer'); ?>
-		<?php echo $form->error($model,'timer'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

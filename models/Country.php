@@ -28,13 +28,26 @@ class Country extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, code, name, population, timer', 'required'),
+			array('code, name, population', 'required'),
 			array('id, population, timer', 'numerical', 'integerOnly'=>true),
 			array('code', 'length', 'max'=>5),
 			array('name', 'length', 'max'=>100),
+			array('timer','default',
+			'value'=>new CDbExpression('TIME()'),
+			'setOnEmpty'=>false,'on'=>'insert'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, code, name, population, timer', 'safe', 'on'=>'search'),
+		);
+	}
+
+	public function behaviors(){
+		return array(
+			'CTimestampBehavior' => array(
+				'class' => 'zii.behaviors.CTimestampBehavior',
+				'createAttribute' => 'timer',
+				'updateAttribute' => null,
+			)
 		);
 	}
 
@@ -56,10 +69,10 @@ class Country extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'code' => 'Code',
-			'name' => 'Name',
-			'population' => 'Population',
-			'timer' => 'Timer',
+			'code' => 'Skrót',
+			'name' => 'Państwo',
+			'population' => 'Populacja',
+			'timer' => 'Czas',
 		);
 	}
 

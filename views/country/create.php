@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Country', 'url'=>array('index')),
-	array('label'=>'Manage Country', 'url'=>array('admin')),
+	array('label'=>'Lista Państw', 'url'=>array('index')),
+	array('label'=>'Edytuj Państwo', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Country</h1>
+<h1>Dodaj Państwo</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

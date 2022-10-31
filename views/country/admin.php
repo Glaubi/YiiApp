@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Countries</h1>
+<h1>Zarządaj Państwami</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -40,6 +40,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'country-grid',
 	'dataProvider'=>$model->search(),
@@ -49,7 +50,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'code',
 		'name',
 		'population',
-		'timer',
+		[
+			'name' => 'timer',
+			'attribute' => 'timer',
+
+			'value' => function($model) {
+
+				   return date('d/m/Y H:i', $model->timer);
+
+			}
+
+		],  
 		array(
 			'class'=>'CButtonColumn',
 		),

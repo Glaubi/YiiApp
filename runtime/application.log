@@ -1,0 +1,332 @@
+2022/10/31 22:10:59 [error] [exception.ParseError] ParseError: syntax error, unexpected identifier "H", expecting ")" in C:\xampp\htdocs\yiiapp\protected\views\country\_form.php:48
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#1 C:\xampp\htdocs\yii\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#2 C:\xampp\htdocs\yiiapp\protected\views\country\create.php(18): CController->renderPartial('_form', Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#6 C:\xampp\htdocs\yii\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#7 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(79): CController->render('create', Array)
+#8 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionCreate()
+#9 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/create')
+#19 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/create
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/index
+---
+2022/10/31 22:17:05 [error] [exception.CException] CException: Property "Country.created" is not defined. in C:\xampp\htdocs\yii\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(162): CComponent->__set('created', Object(CDbExpression))
+#1 C:\xampp\htdocs\yii\yii\framework\validators\CDefaultValueValidator.php(41): CActiveRecord->__set('created', Object(CDbExpression))
+#2 C:\xampp\htdocs\yii\yii\framework\validators\CValidator.php(201): CDefaultValueValidator->validateAttribute(Object(Country), 'created')
+#3 C:\xampp\htdocs\yii\yii\framework\base\CModel.php(159): CValidator->validate(Object(Country), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#5 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(74): CActiveRecord->save()
+#6 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionCreate()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/create')
+#17 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/create
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:25:26 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "yiiapp". in C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('yiiapp')
+#1 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiiapp/index.php?r=yiiapp
+---
+2022/10/31 22:26:32 [error] [exception.Error] Error: Class "yii\behaviors\TimestampBehavior" not found in C:\xampp\htdocs\yiiapp\protected\models\Country.php:50
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(398): Country->behaviors()
+#1 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(165): CActiveRecord::model('Country')
+#2 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel('Country')
+#3 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(127): CActiveDataProvider->__construct('Country')
+#4 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionIndex()
+#5 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/index')
+#15 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/index
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/view&id=3
+---
+2022/10/31 22:27:06 [error] [exception.Error] Error: Class "yii\db\Expression" not found in C:\xampp\htdocs\yiiapp\protected\models\Country.php:53
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(398): Country->behaviors()
+#1 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(165): CActiveRecord::model('Country')
+#2 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel('Country')
+#3 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(127): CActiveDataProvider->__construct('Country')
+#4 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionIndex()
+#5 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#14 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/index')
+#15 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/index
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/view&id=3
+---
+2022/10/31 22:27:18 [error] [php] include(Expression.php): Failed to open stream: No such file or directory (C:\xampp\htdocs\yii\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\YiiBase.php(463): include()
+#1 C:\xampp\htdocs\yiiapp\protected\models\Country.php(53): autoload()
+#2 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(398): Country->behaviors()
+#3 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(165): model()
+#4 C:\xampp\htdocs\yii\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#5 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(127): CActiveDataProvider->__construct()
+#6 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionIndex()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CountryController->runAction()
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CountryController->filterAccessControl()
+#12 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CountryController->runActionWithFilters()
+#15 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CountryController->run()
+#16 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\yiiapp\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiapp/index.php?r=country/index
+in C:\xampp\htdocs\yiiapp\protected\models\Country.php (53)
+in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php (127)
+in C:\xampp\htdocs\yiiapp\index.php (13)
+2022/10/31 22:44:27 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php:159
+Stack trace:
+#0 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CountryController->loadModel('6')
+#1 [internal function]: CountryController->actionView('6')
+#2 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#14 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=6
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:44:29 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php:159
+Stack trace:
+#0 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CountryController->loadModel('6')
+#1 [internal function]: CountryController->actionView('6')
+#2 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#14 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=6
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:44:33 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php:159
+Stack trace:
+#0 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CountryController->loadModel('6')
+#1 [internal function]: CountryController->actionView('6')
+#2 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#14 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=6
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:44:35 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php:159
+Stack trace:
+#0 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CountryController->loadModel('6')
+#1 [internal function]: CountryController->actionView('6')
+#2 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#14 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=6
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:44:37 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php:159
+Stack trace:
+#0 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CountryController->loadModel('6')
+#1 [internal function]: CountryController->actionView('6')
+#2 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#3 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#14 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=6
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:49:43 [error] [exception.CException] CException: Property "Country.created_at" is not defined. in C:\xampp\htdocs\yii\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('created_at')
+#1 C:\xampp\htdocs\yiiapp\protected\views\country\view.php(34): CActiveRecord->__get('created_at')
+#2 C:\xampp\htdocs\yii\yii\framework\zii\widgets\CDetailView.php(214): CBaseController->{closure}(Object(Country))
+#3 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(182): CDetailView->run()
+#4 C:\xampp\htdocs\yiiapp\protected\views\country\view.php(36): CBaseController->widget('zii.widgets.CDe...', Array)
+#5 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#9 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(56): CController->render('view', Array)
+#10 [internal function]: CountryController->actionView('7')
+#11 C:\xampp\htdocs\yii\yii\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs(Object(CountryController), Array)
+#12 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(CountryController), Object(ReflectionMethod), Array)
+#13 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#22 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/view')
+#23 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/view&id=7
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/create
+---
+2022/10/31 22:51:01 [error] [exception.CException] CException: Property "CDataColumn.attribute" is not defined. in C:\xampp\htdocs\yii\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\YiiBase.php(227): CComponent->__set('attribute', 'timer')
+#1 C:\xampp\htdocs\yii\yii\framework\zii\widgets\grid\CGridView.php(404): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\yii\yii\framework\zii\widgets\grid\CGridView.php(375): CGridView->initColumns()
+#3 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yiiapp\protected\views\country\admin.php(45): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#10 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(144): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionAdmin()
+#12 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/admin')
+#22 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/admin
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/index
+---
+2022/10/31 22:51:36 [error] [exception.CException] CException: Property "CDataColumn.attribute" is not defined. in C:\xampp\htdocs\yii\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\yii\framework\YiiBase.php(227): CComponent->__set('attribute', 'timer')
+#1 C:\xampp\htdocs\yii\yii\framework\zii\widgets\grid\CGridView.php(404): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\xampp\htdocs\yii\yii\framework\zii\widgets\grid\CGridView.php(375): CGridView->initColumns()
+#3 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(147): CGridView->init()
+#4 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\xampp\htdocs\yiiapp\protected\views\country\admin.php(45): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yii\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\yii\framework\web\CController.php(785): CController->renderPartial('admin', Array, true)
+#10 C:\xampp\htdocs\yiiapp\protected\controllers\CountryController.php(144): CController->render('admin', Array)
+#11 C:\xampp\htdocs\yii\yii\framework\web\actions\CInlineAction.php(49): CountryController->actionAdmin()
+#12 C:\xampp\htdocs\yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\xampp\htdocs\yii\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#21 C:\xampp\htdocs\yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('country/admin')
+#22 C:\xampp\htdocs\yii\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\yiiapp\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yiiapp/index.php?r=country/admin
+HTTP_REFERER=http://localhost/yiiapp/index.php?r=country/index
+---

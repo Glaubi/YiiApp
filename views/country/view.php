@@ -25,6 +25,16 @@ $this->menu=array(
 		'code',
 		'name',
 		'population',
-		'timer',
+		[
+
+			'attribute' => 'timer',
+
+			'value' => function($model) {
+
+				return date('d/m/Y H:i', $model->timer);
+
+			}
+
+		], 
 	),
 )); ?>

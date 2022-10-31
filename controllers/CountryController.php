@@ -42,6 +42,7 @@ class CountryController extends Controller
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
+			
 		);
 	}
 
@@ -94,6 +95,7 @@ class CountryController extends Controller
 		if(isset($_POST['Country']))
 		{
 			$model->attributes=$_POST['Country'];
+
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
